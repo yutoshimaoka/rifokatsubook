@@ -9,7 +9,7 @@
     <?php wp_body_open(); ?>
     <header class="site-header">
       <a class="brand" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php echo esc_attr(get_bloginfo('name')); ?> トップ">
-        <img src="<?php echo esc_url(rifokatsu_asset('images/logo-rifokatsu.png')); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
+        <img src="<?php echo esc_url(rifokatsu_asset('images/logo-rifokatsu.webp')); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
       </a>
       <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
         <span></span>

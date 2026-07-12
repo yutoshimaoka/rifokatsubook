@@ -12,6 +12,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         articles: 'articles.html',
+        article: 'article.html',
       },
     },
   },

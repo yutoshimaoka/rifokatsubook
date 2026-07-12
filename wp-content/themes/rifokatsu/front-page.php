@@ -12,23 +12,22 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
 ?>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="hero" aria-label="<?php echo esc_attr(get_bloginfo('name')); ?>">
         <div class="hero-gallery" aria-label="リフォーム後の住まいイメージ">
           <figure>
-            <img src="<?php echo esc_url(rifokatsu_asset('images/fv-room.png')); ?>" alt="木の質感でまとめた明るいLDKのリフォームイメージ">
+            <img src="<?php echo esc_url(rifokatsu_asset('images/fv-room.webp')); ?>" alt="木の質感でまとめた明るいLDKのリフォームイメージ">
           </figure>
           <figure>
-            <img src="<?php echo esc_url(rifokatsu_asset('images/fv-kitchen.png')); ?>" alt="使いやすく整えたキッチンのリフォームイメージ">
+            <img src="<?php echo esc_url(rifokatsu_asset('images/fv-kitchen.webp')); ?>" alt="使いやすく整えたキッチンのリフォームイメージ">
           </figure>
         </div>
         <div class="hero-content">
-          <p class="hero-en"><span>RENOVATE</span> <span>YOUR LIFE</span></p>
-          <h1 id="hero-title" class="hero-logo">
-            <img src="<?php echo esc_url(rifokatsu_asset('images/logo-rifokatsu.png')); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
-          </h1>
-          <p class="hero-lead">
-            費用・修理の判断・補助金・業者選びまで。リフォーム前に知っておきたい情報を、やさしく整理する住宅リフォーム情報サイトです。
-          </p>
+          <div class="hero-copy">
+            <p class="hero-en"><span>RENOVATE</span> <span>YOUR LIFE</span></p>
+            <p class="hero-lead">
+              費用・修理の判断・補助金・業者選びまで。リフォーム前に知っておきたい情報を、やさしく整理する住宅リフォーム情報サイトです。
+            </p>
+          </div>
         </div>
       </section>
 
@@ -40,25 +39,25 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
         <div class="carousel" data-carousel>
           <button class="carousel-arrow carousel-prev" type="button" aria-label="前のカードへ"><span class="chev"></span></button>
           <div class="carousel-track equipment-grid">
-            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/equipment/gaiheki.png')); ?>')">
+            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/equipment/gaiheki.webp')); ?>')">
               <span class="topic-card-glass">
                 <span class="card-title">外壁・屋根</span>
                 <span class="card-text">ひび割れ・雨漏り・塗装の不安を確認</span>
               </span>
             </a>
-            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/fv-kitchen.png')); ?>')">
+            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/fv-kitchen.webp')); ?>')">
               <span class="topic-card-glass">
                 <span class="card-title">キッチン</span>
                 <span class="card-text">費用相場や使いやすさの改善ポイントを確認</span>
               </span>
             </a>
-            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/equipment/bathroom.png')); ?>')">
+            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/equipment/bathroom.webp')); ?>')">
               <span class="topic-card-glass">
                 <span class="card-title">浴室</span>
                 <span class="card-text">お風呂の交換時期やリフォーム費用を確認</span>
               </span>
             </a>
-            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/equipment/toilet.png')); ?>')">
+            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/equipment/toilet.webp')); ?>')">
               <span class="topic-card-glass">
                 <span class="card-title">トイレ</span>
                 <span class="card-text">交換費用や工事前の注意点を確認</span>
@@ -70,7 +69,7 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
                 <span class="card-text">交換費用や選び方のポイントを確認</span>
               </span>
             </a>
-            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/fv-room.png')); ?>')">
+            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/fv-room.webp')); ?>')">
               <span class="topic-card-glass">
                 <span class="card-title">給湯器</span>
                 <span class="card-text">交換タイミングや費用の目安を確認</span>
@@ -239,7 +238,7 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
                   $news_query->the_post();
                   $category = get_the_category();
                   ?>
-                  <article class="news-card">
+                  <a class="news-card" href="<?php the_permalink(); ?>">
                     <?php if (has_post_thumbnail()) : ?>
                       <?php the_post_thumbnail('medium_large', ['alt' => the_title_attribute(['echo' => false])]); ?>
                     <?php else : ?>
@@ -249,11 +248,11 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
                       <?php if (! empty($category)) : ?>
                         <span class="article-label"><?php echo esc_html($category[0]->name); ?></span>
                       <?php endif; ?>
-                      <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                      <h3><?php the_title(); ?></h3>
                       <p><?php echo esc_html(wp_trim_words(get_the_excerpt(), 42)); ?></p>
                       <time datetime="<?php echo esc_attr(get_the_modified_date('Y-m-d')); ?>">更新日 <?php echo esc_html(get_the_modified_date('Y.m.d')); ?></time>
                     </div>
-                  </article>
+                  </a>
                   <?php
               endwhile;
               wp_reset_postdata();
@@ -265,7 +264,7 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
               ];
               foreach ($fallback_news as $item) :
                   ?>
-                  <article class="news-card">
+                  <a class="news-card" href="<?php echo esc_url($posts_url); ?>">
                     <img src="<?php echo esc_url($item[3]); ?>" alt="<?php echo esc_attr($item[4]); ?>">
                     <div>
                       <span class="article-label"><?php echo esc_html($item[0]); ?></span>
@@ -273,7 +272,7 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
                       <p><?php echo esc_html($item[2]); ?></p>
                       <time datetime="2026-07-04">更新日 2026.07.04</time>
                     </div>
-                  </article>
+                  </a>
                   <?php
               endforeach;
           endif;
@@ -284,15 +283,6 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
         </div>
       </section>
 
-      <section class="final-cta" aria-labelledby="cta-title">
-        <div>
-          <h2 id="cta-title">リフォーム前の不安を整理したい方へ</h2>
-          <p>
-            費用や修理の必要性、補助金、業者選びは、住まいの状態によって判断が変わります。まずは情報を整理し、必要に応じて相談先を検討しましょう。
-          </p>
-        </div>
-        <a class="button button-primary" href="#">相談前に確認したいポイントを見る</a>
-      </section>
     </main>
 
 <?php

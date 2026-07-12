@@ -11,12 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=202607081105">
+    <link rel="stylesheet" href="styles.css?v=202607120330">
   </head>
   <body class="page-sub">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="住まいのリフォ活入門BOOK トップ">
-        <img src="images/logo-rifokatsu.png" alt="住まいのリフォ活入門BOOK">
+        <img src="images/logo-rifokatsu.webp" alt="住まいのリフォ活入門BOOK">
       </a>
       <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
         <span></span>
@@ -238,11 +238,31 @@
     </main>
 
     <footer class="site-footer">
-      <a class="brand brand-footer" href="index.html" aria-label="リフォ活 入門Book トップ">
-        <span class="brand-main">リフォ活</span>
-        <span class="brand-sub">入門Book</span>
-      </a>
-      <p>知ってから選ぶ、住まいのリフォーム情報サイト。</p>
+      <div class="footer-main">
+        <div class="footer-message">
+          <p class="footer-catch"><span class="footer-catch-main">住まいを、<br>もっと心地よく。</span><span class="footer-catch-sub">知ってから選ぶ、<br>リフォーム情報サイト</span></p>
+        </div>
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <div>
+            <p class="footer-nav-title">探す</p>
+            <a href="index.html#equipment">設備から探す</a>
+            <a href="index.html#worries">悩みから探す</a>
+            <a href="index.html#cases">施工事例</a>
+          </div>
+          <div>
+            <p class="footer-nav-title">読む</p>
+            <a href="articles.html">リフォ活ブログ</a>
+            <a href="index.html#guide">はじめてガイド</a>
+            <a href="index.html#new">新着記事</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <a class="brand brand-footer" href="index.html" aria-label="リフォ活 入門Book トップ">
+          <img src="images/logo-rifokatsu.webp" alt="住まいのリフォ活入門BOOK">
+        </a>
+        <p>© 2026 refokatsu</p>
+      </div>
     </footer>
     <script>
       (function () {
@@ -322,6 +342,18 @@
             });
         }
 
+        function loadFiltersFromUrl() {
+          const params = new URLSearchParams(window.location.search);
+          ['equipment', 'worry'].forEach(function (group) {
+            params.getAll(group).forEach(function (value) {
+              const option = filter.querySelector(
+                '.filter-pill[data-filter-group="' + group + '"][data-filter-value="' + CSS.escape(value) + '"]'
+              );
+              if (option && value) selected[group].add(value);
+            });
+          });
+        }
+
         filter.addEventListener('click', function (e) {
           const pill = e.target.closest('.filter-pill');
           if (!pill) return;
@@ -339,8 +371,10 @@
           apply();
         });
 
+        loadFiltersFromUrl();
         updatePills('equipment');
         updatePills('worry');
+        apply();
       })();
     </script>
   </body>
