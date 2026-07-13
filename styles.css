@@ -2350,6 +2350,14 @@ h2 {
     object-position: 58% center;
   }
 
+  .photo-divider::after {
+    background: transparent;
+  }
+
+  .photo-divider-copy h2 {
+    text-shadow: 0 2px 16px rgba(29, 23, 20, 0.42);
+  }
+
   .site-footer::before {
     background-attachment: scroll;
     background-position: 72% center;
