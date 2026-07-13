@@ -20,6 +20,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -1930,6 +1932,10 @@ h2 {
   gap: 12px;
 }
 
+.post-card[data-href] {
+  cursor: pointer;
+}
+
 .post-card[hidden],
 .blog-empty[hidden],
 .pagination[hidden] {
@@ -2168,8 +2174,8 @@ h2 {
   }
 
   .find-panel .carousel-track {
-    padding: 20px;
-    scroll-padding-left: 20px;
+    padding: 20px max(20px, calc((100vw - 280px) / 2));
+    scroll-padding-inline: max(20px, calc((100vw - 280px) / 2));
   }
 
   .find-panel .equipment-grid .topic-card {
@@ -2180,6 +2186,11 @@ h2 {
   .find-panel .worry-grid .topic-card {
     flex-basis: 280px;
     min-height: 420px;
+  }
+
+  .find-panel .equipment-grid .topic-card,
+  .find-panel .worry-grid .topic-card {
+    scroll-snap-align: center;
   }
 
   .site-header {
@@ -2227,6 +2238,8 @@ h2 {
 
   .hero {
     padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .hero-en {
@@ -2257,12 +2270,19 @@ h2 {
   }
 
   .hero-gallery figure {
-    background-size: 100vw clamp(360px, 48vw, 640px);
+    background-image: none;
+    background-attachment: scroll;
   }
 
-  .hero-gallery figure:first-child,
   .hero-gallery figure:nth-child(2) {
-    background-position: center top;
+    display: none;
+  }
+
+  .hero-gallery img {
+    height: 100svh;
+    min-height: 680px;
+    opacity: 1;
+    object-position: center center;
   }
 
   .memo-card {
@@ -2321,6 +2341,18 @@ h2 {
 
   .photo-divider {
     min-height: 360px;
+    background-image: none;
+    background-attachment: scroll;
+  }
+
+  .photo-divider img {
+    visibility: visible;
+    object-position: 58% center;
+  }
+
+  .site-footer::before {
+    background-attachment: scroll;
+    background-position: 72% center;
   }
 
   .case-card-large img,
@@ -2354,10 +2386,20 @@ h2 {
     font-size: 2.15rem;
   }
 
-  .section,
-  .hero {
+  .section {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .hero {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .seo-article table,
+  .seo-article th,
+  .seo-article td {
+    font-size: 0.88rem;
   }
 
   .news-card {
