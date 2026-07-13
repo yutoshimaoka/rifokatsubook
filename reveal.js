@@ -12,7 +12,9 @@ const itemSelectors = [
 ].join(',');
 
 const items = Array.from(document.querySelectorAll(itemSelectors)).filter((item) => {
-  return !item.closest('[hidden]') && !item.closest('.hero') && !item.matches('script, style');
+  return !item.closest('[hidden]') &&
+    !item.closest('.hero') &&
+    !item.matches('.find-panel .topic-card, script, style');
 });
 
 items.forEach((item, index) => {

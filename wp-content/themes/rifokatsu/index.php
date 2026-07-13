@@ -66,7 +66,7 @@ $is_all = ! $current_cat_id && ! $current_tag_id;
                     <?php if (has_post_thumbnail()) : ?>
                       <?php the_post_thumbnail('medium_large', ['alt' => the_title_attribute(['echo' => false])]); ?>
                     <?php else : ?>
-                      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy">
+                      <img src="<?php echo esc_url(rifokatsu_asset('images/equipment/gaiheki.webp')); ?>" alt="" loading="lazy">
                     <?php endif; ?>
                   </a>
                   <div class="post-body">

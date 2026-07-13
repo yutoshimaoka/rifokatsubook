@@ -23,7 +23,7 @@ get_header();
               <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail('large', ['alt' => the_title_attribute(['echo' => false])]); ?>
               <?php else : ?>
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1300&q=80" alt="">
+                <img src="<?php echo esc_url(rifokatsu_asset('images/fv-room.webp')); ?>" alt="">
               <?php endif; ?>
               <div class="case-body">
                 <span class="article-label"><?php echo esc_html($label); ?></span>

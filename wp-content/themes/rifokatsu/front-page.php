@@ -63,7 +63,7 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
                 <span class="card-text">交換費用や工事前の注意点を確認</span>
               </span>
             </a>
-            <a class="topic-card" href="#" style="--card-img: url('https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=80')">
+            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/fv-kitchen.webp')); ?>')">
               <span class="topic-card-glass">
                 <span class="card-title">洗面台</span>
                 <span class="card-text">交換費用や選び方のポイントを確認</span>
@@ -75,7 +75,7 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
                 <span class="card-text">交換タイミングや費用の目安を確認</span>
               </span>
             </a>
-            <a class="topic-card" href="#" style="--card-img: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80')">
+            <a class="topic-card" href="#" style="--card-img: url('<?php echo esc_url(rifokatsu_asset('images/fv-room.webp')); ?>')">
               <span class="topic-card-glass">
                 <span class="card-title">窓・断熱</span>
                 <span class="card-text">断熱リフォームや補助金の確認ポイントを見る</span>
@@ -94,11 +94,11 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
           <div class="carousel-track worry-grid">
           <?php
           $worries = [
-              ['label' => '費用', 'text' => '費用相場や内訳の考え方を確認', 'img' => 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80'],
-              ['label' => '修理判断', 'text' => '修理か交換かの判断ポイントを確認', 'img' => 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80'],
-              ['label' => '補助金', 'text' => '対象になりやすい制度と申請の流れを確認', 'img' => 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80'],
-              ['label' => '業者選び', 'text' => '失敗しない業者の選び方を確認', 'img' => 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80'],
-              ['label' => '見積り比較', 'text' => '相見積もりの比較ポイントを確認', 'img' => 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'],
+              ['label' => '費用', 'text' => '費用相場や内訳の考え方を確認', 'img' => rifokatsu_asset('images/services/cost.svg')],
+              ['label' => '修理判断', 'text' => '修理か交換かの判断ポイントを確認', 'img' => rifokatsu_asset('images/services/repair.svg')],
+              ['label' => '補助金', 'text' => '対象になりやすい制度と申請の流れを確認', 'img' => rifokatsu_asset('images/services/subsidy.svg')],
+              ['label' => '業者選び', 'text' => '失敗しない業者の選び方を確認', 'img' => rifokatsu_asset('images/services/contractor.svg')],
+              ['label' => '見積り比較', 'text' => '相見積もりの比較ポイントを確認', 'img' => rifokatsu_asset('images/services/quote.svg')],
           ];
           foreach ($worries as $worry) :
               ?>
@@ -144,7 +144,7 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
                     <?php if (has_post_thumbnail()) : ?>
                       <?php the_post_thumbnail('large', ['alt' => the_title_attribute(['echo' => false])]); ?>
                     <?php else : ?>
-                      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1300&q=80" alt="">
+                      <img src="<?php echo esc_url(rifokatsu_asset('images/fv-room.webp')); ?>" alt="">
                     <?php endif; ?>
                     <div class="case-body">
                       <span class="article-label"><?php echo esc_html($label); ?></span>
@@ -163,7 +163,7 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
           else :
               ?>
               <article class="case-card case-card-large">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1300&q=80" alt="明るいLDKのリフォーム事例">
+                <img src="<?php echo esc_url(rifokatsu_asset('images/fv-room.webp')); ?>" alt="明るいLDKのリフォーム事例">
                 <div class="case-body">
                   <span class="article-label">水回り・内装</span>
                   <h3>家族で過ごしやすい明るいLDKへ</h3>
@@ -180,7 +180,7 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
       </section>
 
       <section class="photo-divider" aria-labelledby="divider-title">
-        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=80" alt="明るい住まいのダイニング">
+        <img src="<?php echo esc_url(rifokatsu_asset('images/fv-room.webp')); ?>" alt="明るい住まいのダイニング">
         <div class="photo-divider-copy">
           <h2 id="divider-title">家族が居心地のいい空間を。<br>来た人にも居心地のいい空間を。</h2>
         </div>
@@ -242,7 +242,7 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
                     <?php if (has_post_thumbnail()) : ?>
                       <?php the_post_thumbnail('medium_large', ['alt' => the_title_attribute(['echo' => false])]); ?>
                     <?php else : ?>
-                      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="">
+                      <img src="<?php echo esc_url(rifokatsu_asset('images/equipment/gaiheki.webp')); ?>" alt="">
                     <?php endif; ?>
                     <div>
                       <?php if (! empty($category)) : ?>
@@ -258,9 +258,9 @@ $posts_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/');
               wp_reset_postdata();
           else :
               $fallback_news = [
-                  ['外壁・屋根', '外壁塗装の費用相場と見積もりの見方', '費用の幅と、見積もり前に確認したい項目を整理します。', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', '戸建て住宅の外観'],
-                  ['水回り', 'キッチンリフォームの費用相場と注意点', '工事範囲による費用差と、使いやすさを考えるポイントを紹介します。', 'https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=800&q=80', '清潔感のあるキッチン'],
-                  ['水回り', '浴室リフォームの費用相場と工事の流れ', '交換時期の目安と、見積もり前に知っておきたい流れを整理します。', 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80', '明るい浴室'],
+                  ['外壁・屋根', '外壁塗装の費用相場と見積もりの見方', '費用の幅と、見積もり前に確認したい項目を整理します。', rifokatsu_asset('images/equipment/gaiheki.webp'), '戸建て住宅の外観'],
+                  ['水回り', 'キッチンリフォームの費用相場と注意点', '工事範囲による費用差と、使いやすさを考えるポイントを紹介します。', rifokatsu_asset('images/fv-kitchen.webp'), '清潔感のあるキッチン'],
+                  ['水回り', '浴室リフォームの費用相場と工事の流れ', '交換時期の目安と、見積もり前に知っておきたい流れを整理します。', rifokatsu_asset('images/equipment/bathroom.webp'), '明るい浴室'],
               ];
               foreach ($fallback_news as $item) :
                   ?>
