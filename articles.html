@@ -21,12 +21,15 @@
     <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"CollectionPage","name":"リフォ活ブログ","url":"https://yutoshimaoka.github.io/rifokatsubook/articles.html","description":"リフォームの費用、補助金、修理判断、業者選びに役立つ記事一覧","isPartOf":{"@type":"WebSite","name":"リフォ活 入門Book","url":"https://yutoshimaoka.github.io/rifokatsubook/"},"inLanguage":"ja"}
     </script>
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=202607120330">
   </head>
-  <body class="page-sub">
+  <body>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="住まいのリフォ活入門BOOK トップ">
         <img src="images/logo-rifokatsu.webp" alt="住まいのリフォ活入門BOOK">
@@ -46,14 +49,36 @@
     </header>
 
     <main>
-      <section class="section blog-page" aria-labelledby="blog-title">
+      <section class="page-hero" aria-labelledby="blog-title">
+        <div class="page-hero-media">
+          <img src="images/fv-kitchen.webp" alt="リフォーム後の住まいのイメージ" fetchpriority="high">
+        </div>
+        <div class="page-hero-content">
+          <h1 class="page-hero-en" id="blog-title">
+            <span class="page-hero-title">REFO LOG</span>
+            <span class="page-hero-sub">リフォ活ブログ</span>
+          </h1>
+        </div>
+      </section>
+
+      <section class="section blog-page" aria-label="記事一覧">
         <div class="section-heading">
-          <h1 id="blog-title">リフォ活ブログ</h1>
           <p>設備や悩みのタグから、リフォーム前に確認したい判断材料を探せます。</p>
         </div>
 
-        <div class="blog-filter" aria-label="記事の絞り込み">
-          <div class="filter-row">
+        <div class="mobile-filter-summary">
+          <button class="mobile-filter-toggle" type="button" aria-expanded="false" aria-controls="blog-filter">
+            <span class="mobile-filter-toggle-label">絞り込み</span><span class="mobile-filter-count" hidden>0</span><svg class="mobile-filter-caret" viewBox="0 0 16 8" aria-hidden="true" focusable="false"><path d="M1.5 1.5L8 6.5l6.5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="mobile-selected-filters" aria-label="選択中の条件"></div>
+        </div>
+        <button class="filter-backdrop" type="button" aria-label="絞り込みを閉じる" tabindex="-1"></button>
+        <div class="blog-filter" id="blog-filter" aria-label="記事の絞り込み">
+          <div class="mobile-filter-header">
+            <div><span>Filter</span><h2 class="mobile-filter-title">絞り込み条件</h2></div>
+            <button class="mobile-filter-close" type="button" aria-label="絞り込みを閉じる">×</button>
+          </div>
+          <div class="filter-row" data-group="equipment">
             <span class="filter-label">設備</span>
             <button class="filter-pill is-active" type="button" data-filter-group="equipment" data-filter-value="">すべて</button>
             <button class="filter-pill" type="button" data-filter-group="equipment" data-filter-value="外壁・屋根">外壁・屋根</button>
@@ -64,7 +89,7 @@
             <button class="filter-pill" type="button" data-filter-group="equipment" data-filter-value="給湯器">給湯器</button>
             <button class="filter-pill" type="button" data-filter-group="equipment" data-filter-value="窓・断熱">窓・断熱</button>
           </div>
-          <div class="filter-row">
+          <div class="filter-row" data-group="worry">
             <span class="filter-label">悩み</span>
             <button class="filter-pill is-active" type="button" data-filter-group="worry" data-filter-value="">すべて</button>
             <button class="filter-pill" type="button" data-filter-group="worry" data-filter-value="費用">費用</button>
@@ -73,165 +98,169 @@
             <button class="filter-pill" type="button" data-filter-group="worry" data-filter-value="業者選び">業者選び</button>
             <button class="filter-pill" type="button" data-filter-group="worry" data-filter-value="見積り比較">見積り比較</button>
           </div>
+          <div class="mobile-filter-actions">
+            <button class="mobile-filter-clear" type="button">条件をクリア</button>
+            <button class="mobile-filter-apply" type="button">記事を表示</button>
+          </div>
         </div>
 
         <div class="blog-grid">
-          <article class="post-card" data-equipment="外壁・屋根" data-worry="費用,見積り比較" data-href="article.html?slug=exterior-paint-cost">
-            <a class="post-thumb" href="article.html?slug=exterior-paint-cost">
-              <img src="images/equipment/gaiheki.webp" alt="戸建て住宅の外観" loading="lazy">
+          <article class="post-card" data-equipment="外壁・屋根" data-worry="費用,見積り比較" data-href="articles/exterior-paint-cost/">
+            <a class="post-thumb" href="articles/exterior-paint-cost/">
+              <img src="images/covers/exterior-paint-cost.webp" alt="「雨漏り修理の費用と見積もり内訳の確認ポイント」の記事イメージ" loading="lazy">
             </a>
             <div class="post-body">
-              <h2 class="post-title"><a href="article.html?slug=exterior-paint-cost">外壁塗装の費用相場と見積もりの見方</a></h2>
+              <h2 class="post-title"><a href="articles/exterior-paint-cost/">外壁塗装の費用相場と見積もりの見方</a></h2>
               <div class="post-tags">
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">外壁・屋根</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?equipment=外壁・屋根">外壁・屋根</a>
                 </span>
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">費用</a>
-                  <a class="post-tag post-tag-worry" href="#">見積り比較</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=費用">費用</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=見積り比較">見積り比較</a>
                 </span>
               </div>
               <time datetime="2026-07-04">2026.07.04</time>
             </div>
           </article>
 
-          <article class="post-card" data-equipment="キッチン" data-worry="費用" data-href="article.html?slug=kitchen-remodel-cost">
-            <a class="post-thumb" href="article.html?slug=kitchen-remodel-cost">
-              <img src="images/marquee/kitchen.webp" alt="清潔感のあるキッチン" loading="lazy">
+          <article class="post-card" data-equipment="キッチン" data-worry="費用" data-href="articles/kitchen-remodel-cost/">
+            <a class="post-thumb" href="articles/kitchen-remodel-cost/">
+              <img src="images/covers/kitchen-remodel-cost.webp" alt="「キッチンリフォームの費用相場と注意点」の記事イメージ" loading="lazy">
             </a>
             <div class="post-body">
-              <h2 class="post-title"><a href="article.html?slug=kitchen-remodel-cost">キッチンリフォームの費用相場と注意点</a></h2>
+              <h2 class="post-title"><a href="articles/kitchen-remodel-cost/">キッチンリフォームの費用相場と注意点</a></h2>
               <div class="post-tags">
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">キッチン</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?equipment=キッチン">キッチン</a>
                 </span>
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">費用</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=費用">費用</a>
                 </span>
               </div>
               <time datetime="2026-07-02">2026.07.02</time>
             </div>
           </article>
 
-          <article class="post-card" data-equipment="浴室" data-worry="費用,修理判断" data-href="article.html?slug=bathroom-remodel-flow">
-            <a class="post-thumb" href="article.html?slug=bathroom-remodel-flow">
-              <img src="images/equipment/bathroom.webp" alt="明るい浴室" loading="lazy">
+          <article class="post-card" data-equipment="浴室" data-worry="費用,修理判断" data-href="articles/bathroom-remodel-flow/">
+            <a class="post-thumb" href="articles/bathroom-remodel-flow/">
+              <img src="images/covers/bathroom-remodel-flow.webp" alt="「浴室リフォームの費用相場と工事の流れ」の記事イメージ" loading="lazy">
             </a>
             <div class="post-body">
-              <h2 class="post-title"><a href="article.html?slug=bathroom-remodel-flow">浴室リフォームの費用相場と工事の流れ</a></h2>
+              <h2 class="post-title"><a href="articles/bathroom-remodel-flow/">浴室リフォームの費用相場と工事の流れ</a></h2>
               <div class="post-tags">
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">浴室</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?equipment=浴室">浴室</a>
                 </span>
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">費用</a>
-                  <a class="post-tag post-tag-worry" href="#">修理判断</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=費用">費用</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=修理判断">修理判断</a>
                 </span>
               </div>
               <time datetime="2026-06-28">2026.06.28</time>
             </div>
           </article>
 
-          <article class="post-card" data-equipment="トイレ" data-worry="費用" data-href="article.html?slug=toilet-remodel-cost">
-            <a class="post-thumb" href="article.html?slug=toilet-remodel-cost">
-              <img src="images/equipment/toilet.webp" alt="住まいのトイレ空間" loading="lazy">
+          <article class="post-card" data-equipment="トイレ" data-worry="費用" data-href="articles/toilet-remodel-cost/">
+            <a class="post-thumb" href="articles/toilet-remodel-cost/">
+              <img src="images/covers/toilet-remodel-cost.webp" alt="「トイレの交換時期とリフォーム費用の目安」の記事イメージ" loading="lazy">
             </a>
             <div class="post-body">
-              <h2 class="post-title"><a href="article.html?slug=toilet-remodel-cost">トイレの交換時期とリフォーム費用の目安</a></h2>
+              <h2 class="post-title"><a href="articles/toilet-remodel-cost/">トイレの交換時期とリフォーム費用の目安</a></h2>
               <div class="post-tags">
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">トイレ</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?equipment=トイレ">トイレ</a>
                 </span>
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">費用</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=費用">費用</a>
                 </span>
               </div>
               <time datetime="2026-06-24">2026.06.24</time>
             </div>
           </article>
 
-          <article class="post-card" data-equipment="洗面台" data-worry="費用,見積り比較" data-href="article.html?slug=washbasin-remodel-cost">
-            <a class="post-thumb" href="article.html?slug=washbasin-remodel-cost">
-              <img src="images/equipment/washbasin.webp" alt="洗面まわりのイメージ" loading="lazy">
+          <article class="post-card" data-equipment="洗面台" data-worry="費用,見積り比較" data-href="articles/washbasin-remodel-cost/">
+            <a class="post-thumb" href="articles/washbasin-remodel-cost/">
+              <img src="images/covers/washbasin-remodel-cost.webp" alt="「洗面台リフォームの選び方と費用」の記事イメージ" loading="lazy">
             </a>
             <div class="post-body">
-              <h2 class="post-title"><a href="article.html?slug=washbasin-remodel-cost">洗面台リフォームの選び方と費用</a></h2>
+              <h2 class="post-title"><a href="articles/washbasin-remodel-cost/">洗面台リフォームの選び方と費用</a></h2>
               <div class="post-tags">
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">洗面台</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?equipment=洗面台">洗面台</a>
                 </span>
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">費用</a>
-                  <a class="post-tag post-tag-worry" href="#">見積り比較</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=費用">費用</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=見積り比較">見積り比較</a>
                 </span>
               </div>
               <time datetime="2026-06-20">2026.06.20</time>
             </div>
           </article>
 
-          <article class="post-card" data-equipment="給湯器" data-worry="修理判断,費用" data-href="article.html?slug=water-heater-replacement">
-            <a class="post-thumb" href="article.html?slug=water-heater-replacement">
-              <img src="images/equipment/waterheater.webp" alt="住宅の設備イメージ" loading="lazy">
+          <article class="post-card" data-equipment="給湯器" data-worry="修理判断,費用" data-href="articles/water-heater-replacement/">
+            <a class="post-thumb" href="articles/water-heater-replacement/">
+              <img src="images/covers/water-heater-replacement.webp" alt="「給湯器の交換タイミングと費用の目安」の記事イメージ" loading="lazy">
             </a>
             <div class="post-body">
-              <h2 class="post-title"><a href="article.html?slug=water-heater-replacement">給湯器の交換タイミングと費用の目安</a></h2>
+              <h2 class="post-title"><a href="articles/water-heater-replacement/">給湯器の交換タイミングと費用の目安</a></h2>
               <div class="post-tags">
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">給湯器</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?equipment=給湯器">給湯器</a>
                 </span>
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">修理判断</a>
-                  <a class="post-tag post-tag-worry" href="#">費用</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=修理判断">修理判断</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=費用">費用</a>
                 </span>
               </div>
               <time datetime="2026-06-16">2026.06.16</time>
             </div>
           </article>
 
-          <article class="post-card" data-equipment="窓・断熱" data-worry="補助金,費用" data-href="article.html?slug=window-insulation-subsidy">
-            <a class="post-thumb" href="article.html?slug=window-insulation-subsidy">
-              <img src="images/equipment/window.webp" alt="住まいの窓辺" loading="lazy">
+          <article class="post-card" data-equipment="窓・断熱" data-worry="補助金,費用" data-href="articles/window-insulation-subsidy/">
+            <a class="post-thumb" href="articles/window-insulation-subsidy/">
+              <img src="images/covers/window-insulation-subsidy.webp" alt="「窓・断熱リフォームの費用と補助金」の記事イメージ" loading="lazy">
             </a>
             <div class="post-body">
-              <h2 class="post-title"><a href="article.html?slug=window-insulation-subsidy">窓・断熱リフォームの費用と補助金</a></h2>
+              <h2 class="post-title"><a href="articles/window-insulation-subsidy/">窓・断熱リフォームの費用と補助金</a></h2>
               <div class="post-tags">
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">窓・断熱</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?equipment=窓・断熱">窓・断熱</a>
                 </span>
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">補助金</a>
-                  <a class="post-tag post-tag-worry" href="#">費用</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=補助金">補助金</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=費用">費用</a>
                 </span>
               </div>
               <time datetime="2026-06-12">2026.06.12</time>
             </div>
           </article>
 
-          <article class="post-card" data-equipment="" data-worry="補助金" data-href="article.html?slug=remodel-subsidy-basics">
-            <a class="post-thumb" href="article.html?slug=remodel-subsidy-basics">
-              <img src="images/worries/subsidy.webp" alt="住宅と街並み" loading="lazy">
+          <article class="post-card" data-equipment="" data-worry="補助金" data-href="articles/remodel-subsidy-basics/">
+            <a class="post-thumb" href="articles/remodel-subsidy-basics/">
+              <img src="images/covers/remodel-subsidy-basics.webp" alt="「リフォーム補助金の基礎知識と確認方法」の記事イメージ" loading="lazy">
             </a>
             <div class="post-body">
-              <h2 class="post-title"><a href="article.html?slug=remodel-subsidy-basics">リフォーム補助金の基礎知識と確認方法</a></h2>
+              <h2 class="post-title"><a href="articles/remodel-subsidy-basics/">リフォーム補助金の基礎知識と確認方法</a></h2>
               <div class="post-tags">
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">補助金</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=補助金">補助金</a>
                 </span>
               </div>
               <time datetime="2026-06-08">2026.06.08</time>
             </div>
           </article>
 
-          <article class="post-card" data-equipment="" data-worry="業者選び,見積り比較" data-href="article.html?slug=contractor-selection">
-            <a class="post-thumb" href="article.html?slug=contractor-selection">
-              <img src="images/worries/contractor.webp" alt="書類を確認するテーブル" loading="lazy">
+          <article class="post-card" data-equipment="" data-worry="業者選び,見積り比較" data-href="articles/contractor-selection/">
+            <a class="post-thumb" href="articles/contractor-selection/">
+              <img src="images/covers/contractor-selection.webp" alt="「リフォーム業者の選び方と失敗しない注意点」の記事イメージ" loading="lazy">
             </a>
             <div class="post-body">
-              <h2 class="post-title"><a href="article.html?slug=contractor-selection">リフォーム業者の選び方と失敗しない注意点</a></h2>
+              <h2 class="post-title"><a href="articles/contractor-selection/">リフォーム業者の選び方と失敗しない注意点</a></h2>
               <div class="post-tags">
                 <span class="tag-group">
-                  <a class="post-tag post-tag-worry" href="#">業者選び</a>
-                  <a class="post-tag post-tag-worry" href="#">見積り比較</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=業者選び">業者選び</a>
+                  <a class="post-tag post-tag-worry" href="articles.html?worry=見積り比較">見積り比較</a>
                 </span>
               </div>
               <time datetime="2026-06-04">2026.06.04</time>
@@ -241,12 +270,6 @@
 
         <p class="blog-empty" hidden>条件に合う記事が見つかりませんでした。</p>
 
-        <nav class="pagination" aria-label="ページ送り">
-          <span class="pagination-current" aria-current="page">1</span>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a class="pagination-next" href="#">次へ</a>
-        </nav>
       </section>
     </main>
 
@@ -274,7 +297,7 @@
         <a class="brand brand-footer" href="index.html" aria-label="リフォ活 入門Book トップ">
           <img src="images/logo-rifokatsu.webp" alt="住まいのリフォ活入門BOOK">
         </a>
-        <p>© 2026 refokatsu</p>
+        <div class="footer-legal"><a href="privacy.html">プライバシーポリシー</a><p>© 2026 refokatsu</p></div>
       </div>
     </footer>
     <script>
@@ -308,6 +331,13 @@
         const cards = Array.from(document.querySelectorAll('.blog-grid .post-card'));
         const empty = document.querySelector('.blog-empty');
         const pagination = document.querySelector('.pagination');
+        const mobileToggle = document.querySelector('.mobile-filter-toggle');
+        const mobileClose = document.querySelector('.mobile-filter-close');
+        const mobileBackdrop = document.querySelector('.filter-backdrop');
+        const mobileClear = document.querySelector('.mobile-filter-clear');
+        const mobileApply = document.querySelector('.mobile-filter-apply');
+        const mobileCount = document.querySelector('.mobile-filter-count');
+        const mobileSelected = document.querySelector('.mobile-selected-filters');
         if (!filter || cards.length === 0) return;
 
         cards.forEach(function (card) {
@@ -322,6 +352,38 @@
           equipment: new Set(),
           worry: new Set()
         };
+        let currentVisibleCount = cards.length;
+
+        function setFilterOpen(open) {
+          filter.classList.toggle('is-open', open);
+          document.body.classList.toggle('filter-open', open);
+          if (mobileToggle) {
+            mobileToggle.setAttribute('aria-expanded', String(open));
+            mobileToggle.classList.toggle('is-open', open);
+          }
+          if (mobileBackdrop) mobileBackdrop.setAttribute('tabindex', open ? '0' : '-1');
+        }
+
+        function renderMobileSummary() {
+          if (!mobileSelected || !mobileCount) return;
+          mobileSelected.replaceChildren();
+          let selectionCount = 0;
+          ['equipment', 'worry'].forEach(function (group) {
+            selected[group].forEach(function (value) {
+              selectionCount += 1;
+              const chip = document.createElement('button');
+              chip.type = 'button';
+              chip.className = 'mobile-selected-chip';
+              chip.dataset.filterGroup = group;
+              chip.dataset.filterValue = value;
+              chip.textContent = value + ' ×';
+              mobileSelected.appendChild(chip);
+            });
+          });
+          mobileCount.textContent = String(selectionCount);
+          mobileCount.hidden = selectionCount === 0;
+          if (mobileApply) mobileApply.textContent = currentVisibleCount + '件の記事を表示';
+        }
 
         function splitValues(value) {
           return (value || '')
@@ -349,6 +411,8 @@
           });
           if (empty) empty.hidden = visibleCount !== 0;
           if (pagination) pagination.hidden = selected.equipment.size > 0 || selected.worry.size > 0;
+          currentVisibleCount = visibleCount;
+          renderMobileSummary();
         }
 
         function updatePills(group) {
@@ -366,6 +430,7 @@
         function loadFiltersFromUrl() {
           const params = new URLSearchParams(window.location.search);
           ['equipment', 'worry'].forEach(function (group) {
+            selected[group].clear();
             params.getAll(group).forEach(function (value) {
               const option = filter.querySelector(
                 '.filter-pill[data-filter-group="' + group + '"][data-filter-value="' + CSS.escape(value) + '"]'
@@ -373,6 +438,17 @@
               if (option && value) selected[group].add(value);
             });
           });
+        }
+
+        function syncFiltersToUrl(mode) {
+          const params = new URLSearchParams();
+          ['equipment', 'worry'].forEach(function (group) {
+            selected[group].forEach(function (value) {
+              params.append(group, value);
+            });
+          });
+          const nextUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+          window.history[mode === 'replace' ? 'replaceState' : 'pushState']({}, '', nextUrl);
         }
 
         filter.addEventListener('click', function (e) {
@@ -389,10 +465,44 @@
             selected[group].add(value);
           }
           updatePills(group);
+          syncFiltersToUrl('push');
+          apply();
+        });
+
+        if (mobileToggle) mobileToggle.addEventListener('click', function () {
+          setFilterOpen(!filter.classList.contains('is-open'));
+        });
+        if (mobileClose) mobileClose.addEventListener('click', function () { setFilterOpen(false); });
+        if (mobileBackdrop) mobileBackdrop.addEventListener('click', function () { setFilterOpen(false); });
+        if (mobileApply) mobileApply.addEventListener('click', function () { setFilterOpen(false); });
+        if (mobileClear) mobileClear.addEventListener('click', function () {
+          selected.equipment.clear();
+          selected.worry.clear();
+          updatePills('equipment');
+          updatePills('worry');
+          syncFiltersToUrl('push');
+          apply();
+        });
+        if (mobileSelected) mobileSelected.addEventListener('click', function (event) {
+          const chip = event.target.closest('.mobile-selected-chip');
+          if (!chip) return;
+          selected[chip.dataset.filterGroup].delete(chip.dataset.filterValue);
+          updatePills(chip.dataset.filterGroup);
+          syncFiltersToUrl('push');
+          apply();
+        });
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') setFilterOpen(false);
+        });
+        window.addEventListener('popstate', function () {
+          loadFiltersFromUrl();
+          updatePills('equipment');
+          updatePills('worry');
           apply();
         });
 
         loadFiltersFromUrl();
+        syncFiltersToUrl('replace');
         updatePills('equipment');
         updatePills('worry');
         apply();

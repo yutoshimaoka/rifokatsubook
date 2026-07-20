@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" role="img" aria-labelledby="est-title est-desc">
+  <title id="est-title">見積書で確認すべき内訳の例</title>
+  <desc id="est-desc">見積書のイラスト。応急処置、原因調査、足場、下地補修、防水、撤去処分、追加費用、保証、材料費・施工費・諸経費の9項目に分かれているかを確認します。</desc>
+  <style>
+    .ln { fill: none; stroke: #4a3a33; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .thin { fill: none; stroke: #4a3a33; stroke-width: 1.4; stroke-linecap: round; opacity: .35; }
+    .paper { fill: #fff; stroke: #4a3a33; stroke-width: 2.2; }
+    .chk { fill: none; stroke: #3e7f7a; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+    .row { fill: #4a3a33; font: 500 14px "Noto Sans JP", sans-serif; }
+    .head { fill: #4a3a33; font: 700 16px "Noto Sans JP", sans-serif; }
+    .call { fill: #4a3a33; font: 700 13px "Noto Sans JP", sans-serif; }
+    .lead { fill: none; stroke: #3e7f7a; stroke-width: 1.6; stroke-dasharray: 4 4; }
+    .cap { fill: #857a6e; font: 500 13px "Noto Sans JP", sans-serif; }
+  </style>
+  <rect width="760" height="430" fill="#efe9de" rx="12"/>
+
+  <!-- 見積書 -->
+  <rect class="paper" x="52" y="34" width="392" height="360" rx="6"/>
+  <text class="head" x="76" y="70">見積書</text>
+  <path class="ln" d="M76 84h344"/>
+
+  <!-- 9項目 -->
+  <g>
+    <g transform="translate(0,0)"><path class="chk" d="M80 110l6 6 10-12"/><text class="row" x="108" y="116">応急処置</text><path class="thin" d="M330 112h90"/></g>
+    <g transform="translate(0,32)"><path class="chk" d="M80 110l6 6 10-12"/><text class="row" x="108" y="116">原因調査</text><path class="thin" d="M330 112h90"/></g>
+    <g transform="translate(0,64)"><path class="chk" d="M80 110l6 6 10-12"/><text class="row" x="108" y="116">足場</text><path class="thin" d="M330 112h90"/></g>
+    <g transform="translate(0,96)"><path class="chk" d="M80 110l6 6 10-12"/><text class="row" x="108" y="116">下地補修</text><path class="thin" d="M330 112h90"/></g>
+    <g transform="translate(0,128)"><path class="chk" d="M80 110l6 6 10-12"/><text class="row" x="108" y="116">防水</text><path class="thin" d="M330 112h90"/></g>
+    <g transform="translate(0,160)"><path class="chk" d="M80 110l6 6 10-12"/><text class="row" x="108" y="116">撤去処分</text><path class="thin" d="M330 112h90"/></g>
+    <g transform="translate(0,192)"><path class="chk" d="M80 110l6 6 10-12"/><text class="row" x="108" y="116">追加費用</text><path class="thin" d="M330 112h90"/></g>
+    <g transform="translate(0,224)"><path class="chk" d="M80 110l6 6 10-12"/><text class="row" x="108" y="116">保証</text><path class="thin" d="M330 112h90"/></g>
+    <g transform="translate(0,256)"><path class="chk" d="M80 110l6 6 10-12"/><text class="row" x="108" y="116">材料費・施工費・諸経費</text><path class="thin" d="M330 112h90"/></g>
+  </g>
+
+  <!-- 引き出し線と注記 -->
+  <path class="lead" d="M444 148h56"/>
+  <text class="call" x="508" y="145">調査と本修理は</text>
+  <text class="call" x="508" y="163">分けて記載されているか</text>
+
+  <path class="lead" d="M444 244h56"/>
+  <text class="call" x="508" y="241">足場・高所作業車は</text>
+  <text class="call" x="508" y="259">別項目になっているか</text>
+
+  <path class="lead" d="M444 340h56"/>
+  <text class="call" x="508" y="337">追加費用が発生する条件も</text>
+  <text class="call" x="508" y="355">書面にあるか</text>
+
+  <text class="cap" x="52" y="418">「工事一式」ではなく、項目ごとに分かれているかを見ます</text>
+</svg>

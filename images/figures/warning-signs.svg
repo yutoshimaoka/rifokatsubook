@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" role="img" aria-labelledby="warn-title warn-desc">
+  <title id="warn-title">見積書の注意サイン</title>
+  <desc id="warn-desc">注意が必要な見積書のイラスト。「工事一式」表記、調査費と工事費が未分離、施工範囲が曖昧、保証主体が不明、追加費用条件が未記載の5点を示しています。</desc>
+  <style>
+    .ln { fill: none; stroke: #4a3a33; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .thin { fill: none; stroke: #4a3a33; stroke-width: 1.4; stroke-linecap: round; opacity: .35; }
+    .paper { fill: #fff; stroke: #4a3a33; stroke-width: 2.2; }
+    .row { fill: #4a3a33; font: 500 14px "Noto Sans JP", sans-serif; }
+    .blank { fill: #b9aa9c; font: 500 14px "Noto Sans JP", sans-serif; }
+    .head { fill: #4a3a33; font: 700 16px "Noto Sans JP", sans-serif; }
+    .wc { fill: #d98a3d; }
+    .wt { fill: #fff; font: 700 14px "Noto Sans JP", sans-serif; text-anchor: middle; }
+    .lg-t { fill: #4a3a33; font: 700 14px "Noto Sans JP", sans-serif; }
+    .cap { fill: #857a6e; font: 500 13px "Noto Sans JP", sans-serif; }
+  </style>
+  <rect width="760" height="430" fill="#efe9de" rx="12"/>
+
+  <rect class="paper" x="52" y="34" width="366" height="342" rx="6"/>
+  <text class="head" x="76" y="70">見積書</text>
+  <path class="ln" d="M76 84h318"/>
+
+  <text class="row" x="108" y="130">工事一式</text>
+  <text class="blank" x="300" y="130">¥ — — —</text>
+  <path class="thin" d="M76 146h318"/>
+
+  <text class="row" x="108" y="184">調査費＋工事費</text>
+  <text class="blank" x="300" y="184">¥ — — —</text>
+  <path class="thin" d="M76 200h318"/>
+
+  <text class="row" x="108" y="238">施工範囲：屋根まわり</text>
+  <path class="thin" d="M76 254h318"/>
+
+  <text class="row" x="108" y="292">保証：</text>
+  <text class="blank" x="180" y="292">（記載なし）</text>
+  <path class="thin" d="M76 308h318"/>
+
+  <text class="row" x="108" y="346">追加費用：</text>
+  <text class="blank" x="200" y="346">（記載なし）</text>
+
+  <!-- 注意マーク -->
+  <circle class="wc" cx="84" cy="124" r="13"/><text class="wt" x="84" y="129">!</text>
+  <circle class="wc" cx="84" cy="178" r="13"/><text class="wt" x="84" y="183">!</text>
+  <circle class="wc" cx="84" cy="232" r="13"/><text class="wt" x="84" y="237">!</text>
+  <circle class="wc" cx="84" cy="286" r="13"/><text class="wt" x="84" y="291">!</text>
+  <circle class="wc" cx="84" cy="340" r="13"/><text class="wt" x="84" y="345">!</text>
+
+  <!-- 説明 -->
+  <circle class="wc" cx="474" cy="118" r="13"/><text class="wt" x="474" y="123">!</text>
+  <text class="lg-t" x="498" y="123">内訳が分からず比較できない</text>
+
+  <circle class="wc" cx="474" cy="172" r="13"/><text class="wt" x="474" y="177">!</text>
+  <text class="lg-t" x="498" y="177">原因調査をしたかが曖昧</text>
+
+  <circle class="wc" cx="474" cy="226" r="13"/><text class="wt" x="474" y="231">!</text>
+  <text class="lg-t" x="498" y="231">どこまで直すか分からない</text>
+
+  <circle class="wc" cx="474" cy="280" r="13"/><text class="wt" x="474" y="285">!</text>
+  <text class="lg-t" x="498" y="285">再発時の連絡先が不明</text>
+
+  <circle class="wc" cx="474" cy="334" r="13"/><text class="wt" x="474" y="339">!</text>
+  <text class="lg-t" x="498" y="339">契約後に増額しやすい</text>
+
+  <text class="cap" x="52" y="410">この5点が見つかったら、契約前に書面での説明を求めます</text>
+</svg>

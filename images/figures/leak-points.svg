@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" role="img" aria-labelledby="leak-title leak-desc">
+  <title id="leak-title">雨漏りの原因になりやすい4か所</title>
+  <desc id="leak-desc">住宅の断面イラスト。屋根材・棟板金、取合い部・天窓まわり、外壁・開口部、ベランダ防水の4か所から雨水が浸入しやすいことを示しています。</desc>
+
+  <style>
+    .ln { fill: none; stroke: #4a3a33; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+    .ln-thin { fill: none; stroke: #4a3a33; stroke-width: 1.5; stroke-linecap: round; opacity: .45; }
+    .water { fill: none; stroke: #6f9fc4; stroke-width: 2.6; stroke-linecap: round; stroke-dasharray: 1 7; }
+    .num-c { fill: #4a3a33; }
+    .num-t { fill: #fff; font: 700 15px "Noto Sans JP", sans-serif; text-anchor: middle; }
+    .lg-t { fill: #4a3a33; font: 700 15px "Noto Sans JP", sans-serif; }
+    .lg-s { fill: #857a6e; font: 500 12.5px "Noto Sans JP", sans-serif; }
+    .cap { fill: #857a6e; font: 500 12px "Noto Sans JP", sans-serif; }
+  </style>
+
+  <rect x="0" y="0" width="760" height="430" fill="#efe9de" rx="12"/>
+
+  <!-- 地面 -->
+  <path class="ln" d="M28 366h430"/>
+
+  <!-- 屋根 -->
+  <path class="ln" d="M40 196 236 76l196 120"/>
+  <!-- 屋根材の段（各面に平行） -->
+  <path class="ln-thin" d="M78 196 236 100M116 196 236 124M154 196 236 148"/>
+  <path class="ln-thin" d="M394 196 236 100M356 196 236 124M318 196 236 148"/>
+
+  <!-- 外壁 -->
+  <path class="ln" d="M72 196v170h328V196"/>
+  <path class="ln-thin" d="M72 300h52M264 300h28M72 250h34"/>
+
+  <!-- 棟板金 -->
+  <path class="ln" d="M210 88h52v10h-52z"/>
+
+  <!-- 天窓・取合い部 -->
+  <path class="ln" d="M296 148l40 24-15 12-40-24z"/>
+
+  <!-- 窓（開口部） -->
+  <path class="ln" d="M112 232h76v58h-76z"/>
+  <path class="ln-thin" d="M150 232v58M112 261h76"/>
+
+  <!-- ベランダ（外壁から張り出す） -->
+  <path class="ln" d="M300 282h150v12H300z"/>
+  <path class="ln" d="M450 282v-44M300 238h150"/>
+  <path class="ln-thin" d="M330 238v44M366 238v44M402 238v44M438 238v44"/>
+
+  <!-- 玄関 -->
+  <path class="ln" d="M148 366v-52h44v52"/>
+
+  <!-- 雨水の浸入経路 -->
+  <path class="water" d="M236 102c0 30-14 46-30 62"/>
+  <path class="water" d="M308 166c-10 26-24 40-40 52"/>
+  <path class="water" d="M150 232c-14 24-20 40-22 62"/>
+  <path class="water" d="M376 294c-4 24-10 36-20 50"/>
+
+  <!-- 番号マーカー -->
+  <circle class="num-c" cx="236" cy="93" r="15"/><text class="num-t" x="236" y="98">1</text>
+  <circle class="num-c" cx="314" cy="160" r="15"/><text class="num-t" x="314" y="165">2</text>
+  <circle class="num-c" cx="150" cy="261" r="15"/><text class="num-t" x="150" y="266">3</text>
+  <circle class="num-c" cx="376" cy="288" r="15"/><text class="num-t" x="376" y="293">4</text>
+
+  <!-- 凡例 -->
+  <circle class="num-c" cx="500" cy="94" r="14"/><text class="num-t" x="500" y="99">1</text>
+  <text class="lg-t" x="526" y="91">屋根材・棟板金</text>
+  <text class="lg-s" x="526" y="112">屋根材の差し替え、棟板金の交換</text>
+
+  <circle class="num-c" cx="500" cy="172" r="14"/><text class="num-t" x="500" y="177">2</text>
+  <text class="lg-t" x="526" y="169">取合い部・天窓まわり</text>
+  <text class="lg-s" x="526" y="190">屋根と外壁の接合部</text>
+
+  <circle class="num-c" cx="500" cy="250" r="14"/><text class="num-t" x="500" y="255">3</text>
+  <text class="lg-t" x="526" y="247">外壁・開口部</text>
+  <text class="lg-s" x="526" y="268">ひび割れ、サッシまわりのシーリング</text>
+
+  <circle class="num-c" cx="500" cy="328" r="14"/><text class="num-t" x="500" y="333">4</text>
+  <text class="lg-t" x="526" y="325">ベランダ防水</text>
+  <text class="lg-s" x="526" y="346">防水層・勾配・ドレン接続部</text>
+
+  <path class="water" d="M500 386h26"/>
+  <text class="cap" x="536" y="391">雨水が入り込む経路</text>
+</svg>
