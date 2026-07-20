@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" role="img" aria-labelledby="pa-title pa-desc">
+  <title id="pa-title">相談前の準備と、業者に聞くこと</title>
+  <desc id="pa-desc">左に相談前に準備するもの（写真・動画、見積書や保証書、契約書面）、右に業者に聞くこと（調査範囲、応急処置と本修理の区分、追加費用の条件）を示したイラスト。</desc>
+  <style>
+    .ln { fill: none; stroke: #4a3a33; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .thin { fill: none; stroke: #4a3a33; stroke-width: 1.4; stroke-linecap: round; opacity: .4; }
+    .paper { fill: #fff; stroke: #4a3a33; stroke-width: 2.2; }
+    .head { fill: #4a3a33; font: 700 16px "Noto Sans JP", sans-serif; }
+    .lbl { fill: #4a3a33; font: 500 13.5px "Noto Sans JP", sans-serif; text-anchor: middle; }
+    .bub { fill: #fff; stroke: #3e7f7a; stroke-width: 2.2; }
+    .bub-t { fill: #4a3a33; font: 500 14px "Noto Sans JP", sans-serif; }
+    .divider { fill: none; stroke: #4a3a33; stroke-width: 1.4; opacity: .25; stroke-dasharray: 6 6; }
+  </style>
+  <rect width="760" height="380" fill="#efe9de" rx="12"/>
+  <path class="divider" d="M380 40v304"/>
+
+  <!-- 左：準備するもの -->
+  <text class="head" x="44" y="52">相談前に準備するもの</text>
+
+  <!-- 写真・動画 -->
+  <rect class="paper" x="52" y="96" width="86" height="70" rx="8"/>
+  <circle class="ln" cx="95" cy="132" r="18" fill="none"/>
+  <path class="ln" d="M74 96l10-12h22l10 12"/>
+  <text class="lbl" x="95" y="192">写真・動画</text>
+
+  <!-- 見積書・保証書 -->
+  <rect class="paper" x="176" y="90" width="72" height="82" rx="6"/>
+  <path class="thin" d="M190 112h44M190 130h44M190 148h28"/>
+  <text class="lbl" x="212" y="192">見積書・保証書</text>
+
+  <!-- 契約書面 -->
+  <rect class="paper" x="286" y="90" width="72" height="82" rx="6"/>
+  <path class="thin" d="M300 112h44M300 130h44"/>
+  <path class="ln" d="M300 152l10 8 16-16"/>
+  <text class="lbl" x="322" y="192">契約書面</text>
+
+  <!-- 過去の記録 -->
+  <rect class="paper" x="118" y="232" width="150" height="72" rx="6"/>
+  <path class="thin" d="M136 256h114M136 274h74"/>
+  <text class="lbl" x="193" y="326">過去の修理記録</text>
+
+  <!-- 右：業者に聞くこと -->
+  <text class="head" x="424" y="52">業者に聞くこと</text>
+
+  <rect class="bub" x="424" y="86" width="286" height="62" rx="14"/>
+  <path class="bub" d="M448 148l4 18 18-18z"/>
+  <text class="bub-t" x="448" y="123">調査範囲はどこまでか</text>
+
+  <rect class="bub" x="424" y="182" width="286" height="62" rx="14"/>
+  <path class="bub" d="M448 244l4 18 18-18z"/>
+  <text class="bub-t" x="448" y="219">応急処置と本修理は分かれているか</text>
+
+  <rect class="bub" x="424" y="278" width="286" height="62" rx="14"/>
+  <path class="bub" d="M448 340l4 18 18-18z"/>
+  <text class="bub-t" x="448" y="315">追加費用はどの条件で発生するか</text>
+</svg>

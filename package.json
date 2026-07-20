@@ -1,0 +1,19 @@
+{
+  "name": "rifokatsubook",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "generate:articles": "node scripts/generate-articles.mjs",
+    "predev": "npm run generate:articles",
+    "dev": "vite",
+    "prebuild": "npm run generate:articles",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate:covers": "node scripts/generate-covers.mjs",
+    "generate:figures": "node scripts/generate-figures.mjs"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
+  }
+}

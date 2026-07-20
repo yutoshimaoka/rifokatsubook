@@ -1,0 +1,62 @@
+export const articles = [
+  {
+    slug: 'exterior-paint-cost',
+    title: '雨漏り修理の費用と見積もり内訳の確認ポイント',
+    description: '雨漏り修理の費用は、原因候補と調査範囲で変わります。原因調査と見積書の確認手順を整理します。',
+    category: '外壁・屋根',
+    tags: [{ group: 'equipment', label: '外壁・屋根' }, { group: 'worry', label: '費用' }, { group: 'worry', label: '見積り比較' }],
+    image: 'images/covers/exterior-paint-cost.webp',
+    imageAlt: '「雨漏り修理の費用と見積もり内訳の確認ポイント」の記事イメージ',
+    published: '2026-06-15',
+    modified: '2026-07-13',
+    content: 'rain-leak',
+  },
+  {
+    slug: 'kitchen-remodel-cost', title: 'キッチンリフォームの費用相場と注意点',
+    description: '工事範囲による費用差と、使いやすさを考えるポイントを紹介します。', category: '水回り',
+    tags: [{ group: 'equipment', label: 'キッチン' }, { group: 'worry', label: '費用' }],
+    image: 'images/covers/kitchen-remodel-cost.webp', imageAlt: '「キッチンリフォームの費用相場と注意点」の記事イメージ', published: '2026-07-02', modified: '2026-07-13', content: 'generic',
+  },
+  {
+    slug: 'bathroom-remodel-flow', title: '浴室リフォームの費用相場と工事の流れ',
+    description: '交換時期の目安と、見積もり前に知っておきたい流れを整理します。', category: '水回り',
+    tags: [{ group: 'equipment', label: '浴室' }, { group: 'worry', label: '費用' }, { group: 'worry', label: '修理判断' }],
+    image: 'images/covers/bathroom-remodel-flow.webp', imageAlt: '「浴室リフォームの費用相場と工事の流れ」の記事イメージ', published: '2026-06-28', modified: '2026-07-13', content: 'generic',
+  },
+  {
+    slug: 'toilet-remodel-cost', title: 'トイレの交換時期とリフォーム費用の目安',
+    description: '交換を検討するタイミングと、工事範囲による費用の違いを整理します。', category: '水回り',
+    tags: [{ group: 'equipment', label: 'トイレ' }, { group: 'worry', label: '費用' }],
+    image: 'images/covers/toilet-remodel-cost.webp', imageAlt: '「トイレの交換時期とリフォーム費用の目安」の記事イメージ', published: '2026-06-24', modified: '2026-07-13', content: 'generic',
+  },
+  {
+    slug: 'washbasin-remodel-cost', title: '洗面台リフォームの選び方と費用',
+    description: '洗面台のサイズや収納、工事範囲を決めるときのポイントを紹介します。', category: '水回り',
+    tags: [{ group: 'equipment', label: '洗面台' }, { group: 'worry', label: '費用' }, { group: 'worry', label: '見積り比較' }],
+    image: 'images/covers/washbasin-remodel-cost.webp', imageAlt: '「洗面台リフォームの選び方と費用」の記事イメージ', published: '2026-06-20', modified: '2026-07-13', content: 'generic',
+  },
+  {
+    slug: 'water-heater-replacement', title: '給湯器の交換タイミングと費用の目安',
+    description: '故障のサインや交換時期、見積もりで確認したい項目を整理します。', category: '住宅設備',
+    tags: [{ group: 'equipment', label: '給湯器' }, { group: 'worry', label: '修理判断' }, { group: 'worry', label: '費用' }],
+    image: 'images/covers/water-heater-replacement.webp', imageAlt: '「給湯器の交換タイミングと費用の目安」の記事イメージ', published: '2026-06-16', modified: '2026-07-13', content: 'generic',
+  },
+  {
+    slug: 'window-insulation-subsidy', title: '窓・断熱リフォームの費用と補助金',
+    description: '断熱リフォームで確認したい費用と制度の見方をまとめます。', category: '住宅設備',
+    tags: [{ group: 'equipment', label: '窓・断熱' }, { group: 'worry', label: '補助金' }, { group: 'worry', label: '費用' }],
+    image: 'images/covers/window-insulation-subsidy.webp', imageAlt: '「窓・断熱リフォームの費用と補助金」の記事イメージ', published: '2026-06-12', modified: '2026-07-13', content: 'generic',
+  },
+  {
+    slug: 'remodel-subsidy-basics', title: 'リフォーム補助金の基礎知識と確認方法',
+    description: '対象になりやすい工事と、申請前に確認したい注意点を紹介します。', category: '費用・補助金',
+    tags: [{ group: 'worry', label: '補助金' }],
+    image: 'images/covers/remodel-subsidy-basics.webp', imageAlt: '「リフォーム補助金の基礎知識と確認方法」の記事イメージ', published: '2026-06-08', modified: '2026-07-13', content: 'generic',
+  },
+  {
+    slug: 'contractor-selection', title: 'リフォーム業者の選び方と失敗しない注意点',
+    description: '相見積もりや契約前に確認したい基準を分かりやすく整理します。', category: '業者選び',
+    tags: [{ group: 'worry', label: '業者選び' }, { group: 'worry', label: '見積り比較' }],
+    image: 'images/covers/contractor-selection.webp', imageAlt: '「リフォーム業者の選び方と失敗しない注意点」の記事イメージ', published: '2026-06-04', modified: '2026-07-13', content: 'generic',
+  },
+];

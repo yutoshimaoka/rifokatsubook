@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" role="img" aria-labelledby="qc-title qc-desc">
+  <title id="qc-title">相見積もりでそろえる条件</title>
+  <desc id="qc-desc">2社の見積書を並べたイラスト。調査方法、施工範囲、足場有無、内装復旧有無、保証条件、写真報告書、再発防止確認の7項目を同じ条件にそろえて比較します。</desc>
+  <style>
+    .ln { fill: none; stroke: #4a3a33; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .paper { fill: #fff; stroke: #4a3a33; stroke-width: 2.2; }
+    .head { fill: #4a3a33; font: 700 15px "Noto Sans JP", sans-serif; }
+    .row { fill: #4a3a33; font: 500 13.5px "Noto Sans JP", sans-serif; }
+    .bar { fill: #dfd5c6; }
+    .link { fill: none; stroke: #3e7f7a; stroke-width: 1.6; stroke-dasharray: 4 5; }
+    .badge { fill: #3e7f7a; }
+    .badge-t { fill: #fff; font: 700 14px "Noto Sans JP", sans-serif; text-anchor: middle; }
+    .cap { fill: #857a6e; font: 500 13px "Noto Sans JP", sans-serif; }
+  </style>
+  <rect width="760" height="430" fill="#efe9de" rx="12"/>
+
+  <!-- A社 -->
+  <rect class="paper" x="40" y="52" width="286" height="316" rx="6"/>
+  <text class="head" x="62" y="86">A社の見積書</text>
+  <path class="ln" d="M62 98h242"/>
+  <g>
+    <text class="row" x="62" y="134">調査方法</text><rect class="bar" x="212" y="123" width="92" height="10" rx="5"/>
+    <text class="row" x="62" y="170">施工範囲</text><rect class="bar" x="212" y="159" width="92" height="10" rx="5"/>
+    <text class="row" x="62" y="206">足場有無</text><rect class="bar" x="212" y="195" width="92" height="10" rx="5"/>
+    <text class="row" x="62" y="242">内装復旧有無</text><rect class="bar" x="212" y="231" width="92" height="10" rx="5"/>
+    <text class="row" x="62" y="278">保証条件</text><rect class="bar" x="212" y="267" width="92" height="10" rx="5"/>
+    <text class="row" x="62" y="314">写真報告書</text><rect class="bar" x="212" y="303" width="92" height="10" rx="5"/>
+    <text class="row" x="62" y="350">再発防止確認</text><rect class="bar" x="212" y="339" width="92" height="10" rx="5"/>
+  </g>
+
+  <!-- B社 -->
+  <rect class="paper" x="434" y="52" width="286" height="316" rx="6"/>
+  <text class="head" x="456" y="86">B社の見積書</text>
+  <path class="ln" d="M456 98h242"/>
+  <g>
+    <text class="row" x="456" y="134">調査方法</text><rect class="bar" x="606" y="123" width="92" height="10" rx="5"/>
+    <text class="row" x="456" y="170">施工範囲</text><rect class="bar" x="606" y="159" width="92" height="10" rx="5"/>
+    <text class="row" x="456" y="206">足場有無</text><rect class="bar" x="606" y="195" width="92" height="10" rx="5"/>
+    <text class="row" x="456" y="242">内装復旧有無</text><rect class="bar" x="606" y="231" width="92" height="10" rx="5"/>
+    <text class="row" x="456" y="278">保証条件</text><rect class="bar" x="606" y="267" width="92" height="10" rx="5"/>
+    <text class="row" x="456" y="314">写真報告書</text><rect class="bar" x="606" y="303" width="92" height="10" rx="5"/>
+    <text class="row" x="456" y="350">再発防止確認</text><rect class="bar" x="606" y="339" width="92" height="10" rx="5"/>
+  </g>
+
+  <!-- 同じ行どうしをつなぐ -->
+  <path class="link" d="M326 128h108M326 164h108M326 200h108M326 236h108M326 272h108M326 308h108M326 344h108"/>
+
+  <!-- 中央のバッジ -->
+  <circle class="badge" cx="380" cy="236" r="26"/>
+  <text class="badge-t" x="380" y="232">同じ</text>
+  <text class="badge-t" x="380" y="248">条件</text>
+
+  <text class="cap" x="40" y="404">この7項目をそろえると、金額の差がどこから出ているかが分かります</text>
+</svg>

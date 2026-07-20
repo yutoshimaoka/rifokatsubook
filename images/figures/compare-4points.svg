@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" role="img" aria-labelledby="cp-title cp-desc">
+  <title id="cp-title">見積もりを比較するときにそろえる4項目</title>
+  <desc id="cp-desc">見積書のイラストに4つの吹き出し。工事範囲（撤去・処分や下地補修を含むか）、製品とグレード（品番の記載があるか）、追加費用の条件（発生条件と承認方法）、保証（対象範囲・期間・保証主体）。</desc>
+  <style>
+    .ln { fill: none; stroke: #4a3a33; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .thin { fill: none; stroke: #4a3a33; stroke-width: 1.4; stroke-linecap: round; opacity: .35; }
+    .paper { fill: #fff; stroke: #4a3a33; stroke-width: 2.2; }
+    .head { fill: #4a3a33; font: 700 15px "Noto Sans JP", sans-serif; }
+    .bub { fill: #fff; stroke: #3e7f7a; stroke-width: 2; }
+    .num { fill: #3e7f7a; }
+    .num-t { fill: #fff; font: 700 13px "Noto Sans JP", sans-serif; text-anchor: middle; }
+    .bt { fill: #4a3a33; font: 700 14px "Noto Sans JP", sans-serif; }
+    .bs { fill: #857a6e; font: 500 12px "Noto Sans JP", sans-serif; }
+    .lead { fill: none; stroke: #3e7f7a; stroke-width: 1.6; stroke-dasharray: 4 4; }
+  </style>
+  <rect width="760" height="400" fill="#efe9de" rx="12"/>
+
+  <!-- 見積書 -->
+  <rect class="paper" x="286" y="70" width="188" height="260" rx="6"/>
+  <text class="head" x="306" y="104">見積書</text>
+  <path class="ln" d="M306 116h148"/>
+  <path class="thin" d="M306 146h148M306 176h148M306 206h148M306 236h148M306 266h148M306 296h100"/>
+
+  <!-- 1 工事範囲 -->
+  <path class="lead" d="M286 150h-40"/>
+  <rect class="bub" x="30" y="118" width="216" height="66" rx="14"/>
+  <circle class="num" cx="56" cy="140" r="12"/><text class="num-t" x="56" y="145">1</text>
+  <text class="bt" x="76" y="145">工事範囲</text>
+  <text class="bs" x="52" y="168">撤去・処分／下地補修を含むか</text>
+
+  <!-- 2 製品とグレード -->
+  <path class="lead" d="M286 250h-40"/>
+  <rect class="bub" x="30" y="218" width="216" height="66" rx="14"/>
+  <circle class="num" cx="56" cy="240" r="12"/><text class="num-t" x="56" y="245">2</text>
+  <text class="bt" x="76" y="245">製品とグレード</text>
+  <text class="bs" x="52" y="268">品番まで記載されているか</text>
+
+  <!-- 3 追加費用の条件 -->
+  <path class="lead" d="M474 150h40"/>
+  <rect class="bub" x="514" y="118" width="216" height="66" rx="14"/>
+  <circle class="num" cx="540" cy="140" r="12"/><text class="num-t" x="540" y="145">3</text>
+  <text class="bt" x="560" y="145">追加費用の条件</text>
+  <text class="bs" x="536" y="168">発生条件と承認方法が書面にあるか</text>
+
+  <!-- 4 保証 -->
+  <path class="lead" d="M474 250h40"/>
+  <rect class="bub" x="514" y="218" width="216" height="66" rx="14"/>
+  <circle class="num" cx="540" cy="240" r="12"/><text class="num-t" x="540" y="245">4</text>
+  <text class="bt" x="560" y="245">保証</text>
+  <text class="bs" x="536" y="268">対象範囲・期間・保証主体</text>
+</svg>
